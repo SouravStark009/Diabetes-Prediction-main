@@ -11,7 +11,6 @@ y = data['Outcome']
 Model.fit(X, y)
 
 y_pred = Model.predict_proba(X)[:, 1]
-
-print("ROC_AUC Score: ", (roc_auc_score(y, y_pred) * 100).round(2))
+print("ROC_AUC Score: ", round(roc_auc_score(y, y_pred) * 100, 2))
 
 joblib.dump(Model, 'model.pkl')

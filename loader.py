@@ -26,11 +26,12 @@ y_pred = (y_score >= thresholds).astype(int)
 
 # Accuracy Score
 accuracy_result = round(accuracy_score(y, y_pred) * 100, 2)
-# F! Score
-f1_result = (f1_score(y, y_pred) * 100).round(2)
+
+# F1 Score
+f1_result = round(f1_score(y, y_pred) * 100, 2)
 # Recall Score
-recall_result = (recall_score(y, y_pred) * 100).round(2)
+recall_result = round(recall_score(y, y_pred) * 100, 2)
 # Precision Score
-precision_result = (precision_score(y, y_pred) * 100).round(2)
+precision_result = round(precision_score(y, y_pred) * 100, 2)
 # ROC AUC Score
-roc_auc = (roc_auc_score(y, y_score)*100).round(2)
+roc_auc = round(roc_auc_score(y, y_score) * 100, 2)
